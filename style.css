@@ -1,0 +1,257 @@
+/* CSS Document */
+html {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #111;
+}
+
+
+
+
+.topbar {
+	background-color: #E1B910;
+	position: fixed;
+	top: 0;
+	height: 60px;
+	left: 0;
+	right: 0;
+	text-align: left;
+	font-size: 40px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	line-height: 60px;
+	z-index: 10;
+}
+
+.gridcontainer {
+	position: fixed;
+	top: 60px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.row {
+	height: 160px;
+}
+
+.box {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 25%;
+	height: 100%;
+	border-bottom: solid 1px #fff;
+}
+
+.box.live {
+	background-color: #000;
+	cursor: pointer;
+	display: none;
+}
+
+.box.nextLevel {
+	background-color: #00919E;
+	color: #FFFFFF;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	text-align: center;
+	font-size: 2em;
+}
+
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+.loader {
+	position: fixed;
+	z-index: 10;
+	background-color: #fff;
+	background-image: url(logo/Preloader_4.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	top: 60px;
+	left: 0px;
+	bottom: 0px;
+	text-align: center;
+	display: none;
+}
+
+.loader div {
+	color: #40A8CC;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	position: relative;
+	margin-top: 50%;
+	padding-top: 140px;
+}
+
+.topbar .time {
+	position: relative;
+	float: right;
+	padding-right: 30px;
+}
+.topbar .rBox {
+	margin-left: 30px;
+}
+.result {
+	background-color: #BD9C0D;
+	position: fixed;
+	top: 60px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 1;
+	text-align: center;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	color: #FFFFFF;
+	font-weight: 100;
+	font-size: 24px;
+	padding-top: 55px;
+	line-height: 45px;
+	z-index: 3;
+}
+.result .bigtitle {
+	font-size: 35px;
+	font-weight: bold;
+}
+.result .highscore {
+	font-size: 18px;
+}
+
+.result .score {
+	font-size: 52px;
+	line-height: 60px;
+}
+
+.bottom {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: block;
+	z-index: 4;
+}
+
+.replay {
+	padding: 0;
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: #E1B910;
+	border: none !important;
+	border-width: 0 !important;
+	color: #FFFFFF;
+	cursor: pointer;
+	position: relative
+	float: left;
+	width: 60%;
+	font-size: 20px;
+	font-weight: 900;
+	z-index: 4;
+	margin: 0;
+	display: inline;
+}
+.share {
+	padding: 0;
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: #F2D55A;
+	border: none !important;
+	border-width: 0 !important;
+	color: #FFFFFF;
+	cursor: pointer;
+	position: relative;
+	float: right; 
+	width: 38%;
+	font-size: 20px;
+	font-weight: 900;
+	z-index: 4;
+	display: inline;
+}
+
+.timeR, .score, .highscore { display: none; }
+
+.shareModal {
+	bottom: 58px;
+	left: 0px;
+	right: 0px;
+	opacity: 1;
+	z-index: 3;
+	width: 100%;
+	position: fixed;
+	display: none;
+}
+.shareModal img {
+	height: 38px;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+}
+.shareModal li {
+	height: 50px;
+	color: #FFFFFF;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-weight: 100;
+	font-size: 24px;
+	cursor: pointer;
+}
+.shareModal .twitter {
+	background-color: #01ABC0;
+	list-style-type: none;
+}
+.shareModal .fb {
+	background-color: #003778;
+	list-style-type: none;
+}
+.shareModal .twitter img {
+	background-color: #007786;
+}
+.shareModal .fb img {
+	background-color: #00234C;
+}
+.shareModal li div {
+	margin-top: -44px;
+	margin-left: 70px;
+}
+.shareModal a {
+	text-decoration: none;
+}
+
+
+
+@media screen and (min-width: 480px) {
+	.row {
+		height: 280px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body .bigBox, .topbar, .gridcontainer, .result, .shareModal, .bottom {
+		max-width: 768px;
+		left: 50% !important;
+		margin: 0 0 0 -384px !important;
+	}
+	
+	.replay {
+		max-width: 456px;
+	}
+	
+	.share {
+		max-width: 307px;
+	}
+}
